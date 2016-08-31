@@ -15,3 +15,8 @@ aws cli cmd:
 ```
 aws ec2 monitor-instances --instance-ids i-123 
 ```
+
+######7 Viewing and Searching for Metrics
+```
+aws cloudwatch list-metrics --namespace 'AWS/SNS'
+```
