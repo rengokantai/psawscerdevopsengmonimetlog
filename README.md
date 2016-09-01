@@ -21,6 +21,11 @@ aws ec2 monitor-instances --instance-ids i-123
 aws cloudwatch list-metrics --namespace 'AWS/SNS'
 ```
 ######8 Getting statistics
+3600 seconds
 ``` 
 aws cloudwatch get-metric-statistics --namespace AWS/EC2 --metric-name CPUUtilization --period 3600 --statictics Maximumm --dimensions 'Name=InstaneId,Value=i-1234' --start-time 2016-01-01T11:11:11 --end-time 2016-01-03T12:12:12
+```
+another example
+```
+aws cloudwatch get-metric-statistics --namespace AWS/EC2 --metric-name DiskWriteBytes --period 360 --statictics Sum --dimensions 'Name=AutoScalingGroupName,Value=ke' --start-time 2016-01-01T11:11:11 --end-time 2016-01-03T12:12:12
 ```
