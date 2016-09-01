@@ -57,3 +57,13 @@ curl http://aws-cloudwatch.s3.amazonaws.com/downloads/CloudWatchMonitoringScript
 unzip CloudWatchMonitoringScripts-1.2.1.zip
 rm CloudWatchMonitoringScripts-1.2.1.zip
 ```
+
+
+
+######13 publishing custom metrics from windows
+ps
+```
+aws cloudwatch put-metric-data --metric-name FreeMemoryGB --namespace Windows --value 5 --region eu-west-1 --dimensions 'Name=Server,Value=WIN'
+```
+######14
+tbc 2:30
